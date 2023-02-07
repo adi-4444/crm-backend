@@ -6,5 +6,5 @@ module.exports = {
     PORT: process.env.PORT,
     NOTIFICATTION_PORT: process.env.PORT,
     NOTIFICATTION_IP: process.env.NOTIFICATTION_IP
-    
+
 }
