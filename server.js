@@ -46,26 +46,19 @@ db.once("open", () => {
  * ideally one ADMIN user should have been created in the backend
  */
 async function init() {
-
-
-    var user = await User.findOne({ userId: "admin" });
-
+    var user = await User.findOne({ userId: "adiadmin" });
     if (user) {
         console.log("Admin user already present");
         return;
     }
-
     try {
-
         user = await User.create({
-            name: "Vishwa",
+            name: "Admin",
             userId: "admin", // It should be atleat 16, else will throw error
-            email: "Kankvish@gmail.com",  // If we don't pass this, it will throw the error
+            email: "admin@gmail.com",  // If we don't pass this, it will throw the error
             userType: "ADMIN",
-            password: bcrypt.hashSync("Welcome1", 8) //this field should be hidden from the end user
-
+            password: bcrypt.hashSync("qwerty123", 8) //this field should be hidden from the end user
         });
-
     } catch (e) {
         console.log(e.message);
     }

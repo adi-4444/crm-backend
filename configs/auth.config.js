@@ -1,3 +1,3 @@
 module.exports = {
-    secret: "Vishwa-Mohan-secret-key"
+    secret: "Adi-crm-secret-key"
 };
